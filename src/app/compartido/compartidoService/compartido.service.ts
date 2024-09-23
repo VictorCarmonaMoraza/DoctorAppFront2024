@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Session } from 'inspector';
+import { Sesion } from '../../usuario/interfaces/sesion';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class CompartidoService {
     })
   }
 
-  saveSesion(sesion: Session):void {
+  saveSesion(sesion: Sesion):void {
     localStorage.setItem("userSesion", JSON.stringify(sesion));
   }
 
